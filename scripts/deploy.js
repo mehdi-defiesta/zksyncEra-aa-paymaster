@@ -8,7 +8,7 @@ const provider = Provider.getDefaultProvider(types.Network.Sepolia);
 
 // private key generated using node -> require('crypto').randomBytes(32).toString('hex')
 const wallet = new Wallet(
-  "c850f1f3addd7ae8bcbb38910ea5180ef7b8b9c183008257b591b4bc76cfaa64", 
+  "c95f63fa4c87df6a177620847cd193b52733391d0792dce9972c855ec885b1fa", 
   provider
 );
 

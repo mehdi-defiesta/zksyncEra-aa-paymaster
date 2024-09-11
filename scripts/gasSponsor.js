@@ -4,13 +4,13 @@ const { getPaymasterParams } = require("zksync-ethers/build/paymaster-utils");
 const provider = Provider.getDefaultProvider(types.Network.Sepolia);
 
 const wallet = new Wallet(
-  "c850f1f3addd7ae8bcbb38910ea5180ef7b8b9c183008257b591b4bc76cfaa64", // <-- this private key does not need gas, as it will be sponsored
+  "c95f63fa4c87df6a177620847cd193b52733391d0792dce9972c855ec885b1fa", // <-- this private key does not need gas, as it will be sponsored
   provider
 );
 
 console.log(wallet.address);
 
-const PAYMASTER = "0x789A9b6cbd46EF5aBa007E6EACFc8DC6FE391aD9";
+const PAYMASTER = "0x43dAeFbc2b15d748eC4b215E451d80e5797a515A";
 
 (async () => {
   const paymasterParams = getPaymasterParams(PAYMASTER, {
@@ -20,7 +20,7 @@ const PAYMASTER = "0x789A9b6cbd46EF5aBa007E6EACFc8DC6FE391aD9";
 
   const tx = await wallet.sendTransaction({
     data: "0x1337",
-    to: "0x789A9b6CbD46ef5Aba007E6EAcfc8Dc6FE391aD0",
+    to: "0xE41946FE836662a69B7adb7af657a1Db51Ebf193",
     customData: {
       paymasterParams,
     },
